@@ -17,7 +17,7 @@ document.body.appendChild(component());
  */
 
 import _ from 'lodash'
-import './style.css'
+import './assets/style.css'
 
 function component(){
     var element = document.createElement('div');

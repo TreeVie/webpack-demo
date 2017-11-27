@@ -1,0 +1,10 @@
+.hello{
+    color: red;
+    background: url('./image/logo.svg');
+    font-family: 'viper'
+}
+
+@font-face {
+    font-family: 'viper';
+    src: url('./font/VIPESSRG.TTF');
+}
