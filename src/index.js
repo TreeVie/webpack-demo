@@ -18,12 +18,19 @@ document.body.appendChild(component());
 
 import _ from 'lodash'
 import './assets/style.css'
+import print from './print'
 
 function component(){
     var element = document.createElement('div');
+    var btn = document.createElement('button');
 
     element.innerHTML = _.join(['Hello','Webpack'],' ');
-    element.classList.add('hello')
+    element.classList.add('hello');
+
+    btn.innerHTML = 'Click me';
+    btn.onclick = print;
+
+    element.appendChild(btn)
 
     return element;
 }

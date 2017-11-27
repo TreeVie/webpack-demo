@@ -1,6 +1,6 @@
 .hello{
     color: red;
-    background: url('./image/logo.svg');
+    /* background: url('./image/logo.svg'); */
     font-family: 'viper'
 }
 

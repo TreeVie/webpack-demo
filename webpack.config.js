@@ -1,11 +1,17 @@
 var path = require('path');
+var webpack = require('webpack');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
+var CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
     // 入口文件
-    entry:'./src/index.js',
+    entry:{
+        app:'./src/index.js',
+        print:'./src/print.js'
+    },
     // 导出配置
     output:{
-        filename:'bundle.js',
+        filename:'[name].bundle.js',
         path:path.resolve(__dirname,'dist')
     },
     module:{
@@ -28,5 +34,11 @@ module.exports = {
                 ]
             }
         ]
-    }
+    },
+    plugins:[
+        new HtmlWebpackPlugin({
+            title:'Output Management'
+        }),
+        new CleanWebpackPlugin(['dist'])
+    ]
 };
